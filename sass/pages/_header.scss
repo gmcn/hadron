@@ -15,3 +15,73 @@ ul.nav li.menu-item-has-children:hover > ul.dropdown-menu {
     display: block !important;
   }
 }
+
+.home {
+  nav.navbar {
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    background: $blue;
+    @include sm {
+      background: transparent;
+      position: fixed;
+    }
+    .navbar-brand {
+      img {
+        max-height: 37px;
+      }
+    }
+    .navbar-nav {
+      > li > a {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        &:hover {
+          color: #C3D600;
+        }
+      }
+    }
+
+  }
+}
+
+nav.navbar {
+  &.scrolled {
+    background: $blue !important;
+    transition: .5s;
+  }
+  background: $blue;
+  @include sm {
+    background: transparent;
+    position: fixed;
+  }
+  width: 100%;
+  border-bottom: 1px solid #fff;
+
+  color: #fff;
+  .navbar-brand {
+    img {
+      max-height: 37px;
+    }
+  }
+  .menu-primary-menu-container {
+    ul {
+      @include md {
+        margin-right: 40px;
+      }
+    }
+    a {
+      padding: 14px 30px;
+    }
+  }
+  .navbar-nav {
+    padding-top: 10px;
+    > li > a {
+      font-size: 14px;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+
+}

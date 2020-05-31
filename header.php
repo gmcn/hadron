@@ -41,7 +41,7 @@
           <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<?php $description = get_bloginfo( 'description', 'display' ); ?>
 
-						<img src="" alt=" <?php echo $description; /* WPCS: xss ok. */ ?>">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php echo $description; /* WPCS: xss ok. */ ?>">
 
 					</a>
 
@@ -50,6 +50,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 
+					<ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+            <li><a href="mailto:support@hadrongroup.co.uk"><img src="<?php echo get_template_directory_uri(); ?>/images/email-icon.svg" alt="Call Us"></a></li>
+          </ul>
+
 					<?php wp_nav_menu( array(
 							'theme_location' => 'menu-1',
 							'menu_id' => 'navbar',
@@ -57,11 +61,7 @@
 							'items_wrap' => '<ul id="" class="nav navbar-nav navbar-right">%3$s</ul>' ) );
 							?>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-          </ul>
+
         </div><!--/.nav-collapse -->
       </div>
     </nav>

@@ -1,8 +1,21 @@
 ( function($) {
 
+  $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 50) {
+          $(".navbar-static-top").addClass("scrolled");
+      } else {
+          $(".navbar-static-top").removeClass("scrolled");
+      }
+  });
+
   // bxslider
   $('.bxslider').bxSlider({
-
+    pager: false,
+    touchEnabled: false,
+    infiniteLoop: true,
+    mode: 'fade',
    });
 
   /**
@@ -31,7 +44,7 @@ window.cookieconsent.initialise({
     }
   },
   "theme": "edgeless",
-  "position": "top",
+  "position": "bottom",
   "static": true,
   "content": {
     "message": "This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.",
